@@ -1,5 +1,8 @@
 package my.pack
 
+
+
+@SuppressWarnings("serial")
 class XtendGreeting {
 
     def greeting() {
