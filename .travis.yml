@@ -22,3 +22,4 @@ script:
 - mvn -f my.mavenized.herolanguage.releng/pom.xml clean install
 - mvn -f example-project/pom.xml clean install
 - mvn -f example-project/pom.xml verify org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar -Dsonar.host.url=https://sonarqube.com -Dsonar.login=$SONAR_TOKEN
+- mvn -f my.mavenized.herolanguage.releng/pom.xml verify org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar -Dsonar.host.url=https://sonarqube.com -Dsonar.login=$SONAR_TOKEN
