@@ -20,6 +20,10 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		<tycho-version>0.24.0</tycho-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<xtext.version>2.9.0</xtext.version>
+
+		<!-- Sonar configuration -->
+		<sonar.sources>.</sonar.sources>
+		<sonar.exclusions>src-gen/**</sonar.exclusions>
 	</properties>
 
 	<repositories>
@@ -37,8 +41,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 	<build>
 		<pluginManagement>
 			<plugins>
-				<!-- xtend-maven-plugin is in pluginManagement instead of in plugins 
-					so that it doesn't run before the exec-maven-plugin's *.mwe2 gen; this way 
+				<!-- xtend-maven-plugin is in pluginManagement instead of in plugins
+					so that it doesn't run before the exec-maven-plugin's *.mwe2 gen; this way
 					we can list it after. -->
 
 				<plugin>
