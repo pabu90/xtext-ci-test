@@ -9,6 +9,9 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<xtext-version>2.9.0</xtext-version>
+
+		<!-- Sonar configuration -->
+		<sonar.projectName>Xtext-Maven-CI-Test</sonar.projectName> <!-- Name of the project for web interface - don't overwrite when already in DB! -->
 	</properties>
 
 	<dependencies>

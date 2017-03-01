@@ -5,6 +5,7 @@ jdk:
 env:
   global:
   - DISPLAY=:99.0
+  - secure: cOhC4zxyMM/fot2fTz2Ar+8gPVBzxmqgk1qlk5+WzzgKcyrW8b6ZnSK3L1gF1AYBW2PLnq7xVvEDQAoQgMHj0fosmz/chHiRATt/+am3sUxR5R7YUh6Mk1AVeMtH3RFdbn45sSkC4wf0waCczN2FoUAWNO9dlS4IdBXRi6quEeTvaUbCIVHdzQtba2rb1iblNnmO6NENW9FDu8aqzqWbX1C7irovcixPMaNzRmS6dWPjsIBoECbUX0Web5EsCVIaojZdKM2ld2wFWzVY9cn2vsh6cDir2SNy8oR4uaCDo6v0ZohHsPInEbEZF/esFEKXPMT3VUbr8AC5Gspnqb9VVf+8eTQC5oweFIq3kQrS7EpOdv/2clbixXFNahZXxD8Az1+oGfDwIW9vaix2dg5AE3jOn8YMYKVmGzy/WdtMaP0qfpEXVEUXioTHnYZgC4l7zJgDoAKfJwZR6lVc84zHllF8oqmovUYTGXUtGU/dnBhyti2oquNDPq+61IfzkA5tNg/iARRexAGU8v1BkKispS7irpxu9na9F5WzKVV8PC4FOSj+P3fXZaygCGYQin/R0wvsUsereIfJfzHYduHSqjZHdlNZ5yI+OwJCjYHuTpnStlgKk0eA7yUsrxX6gdITxY7C/a3+NP2AC9y92fnsztRwu/3UOrD2p8Bw0g9ZGOc=
 cache:
   directories:
   - "$HOME/.m2"
@@ -20,3 +21,4 @@ install: true
 script:
 - mvn -f my.mavenized.herolanguage.releng/pom.xml clean install
 - mvn -f example-project/pom.xml clean install
+- mvn -f example-project/pom.xml org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar -Dsonar.host.url=https://sonarqube.com -Dsonar.login=$SONAR_TOKEN
